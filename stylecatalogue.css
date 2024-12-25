@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #217c91;
+    padding: 10px;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+    font-size: 2.5em; /* Augmentez la taille selon vos besoins */
+    margin: 20px 0;
+    color: #201f1f; /* Facultatif : Ajoutez une couleur pour le style */
+}
+
+/* catalogue */
+.catalogue {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.produit {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    position: relative;
+}
+
+.images {
+    display: flex;
+    overflow: hidden;
+    height: 200px;
+}
+
+.images img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    animation: defilement 10s infinite linear;
+}
+
+@keyframes defilement {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-200px); }
+    66% { transform: translateX(-400px); }
+    100% { transform: translateX(0); }
+}
+
+.prix-barre {
+    text-decoration: line-through;
+    color: #ff0101;
+    margin-right: 10px;
+}
+
+.prix {
+    font-weight: bold;
+    color: #217c91;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #217c91;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+/* bouton revenir à la page accuil" */
+.bouton-catalogue {
+    display: flex; /* Utilisez flexbox pour centrer */
+    justify-content: center; /* Centre horizontalement */
+    margin-top: 20px; /* Espace au-dessus du bouton */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #217c91;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #217c91;
+}
+/*footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #217c91;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/*tout reste inchanges */
+.produits-container {
+    display: flex; /* Aligne les produits horizontalement */
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les produits horizontalement */
+    gap: 20px; /* Ajoute un espace entre les produits */
+}
+
+.produit {
+    flex: 1 1 calc(25% - 20px); /* Adapte la largeur des produits */
+    box-sizing: border-box; /* Inclut les marges/paddings dans la largeur totale */
+    max-width: 300px; /* Limite la taille maximale des produits */
+    min-width: 200px; /* Définit une taille minimale */
+}
+
+@media (max-width: 768px) {
+    .produit {
+        flex: 1 1 calc(50% - 20px); /* 2 produits par ligne sur écran moyen */
+    }
+}
+
+@media (max-width: 480px) {
+    .produit {
+        flex: 1 1 100%; /* 1 produit par ligne sur petit écran */
+    }
+}
+/* Revenir en haut */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: none;
+    background-color: #289db9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scrollToTop:hover {
+    background-color: #217c91;
+}
+/* Cartes de produits animées */
+.produit {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+

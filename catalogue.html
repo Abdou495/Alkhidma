@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - Ma Boutique</title>
+    <link rel="stylesheet" href="stylecatalogue.css">
+</head>
+<body>
+    <!--l'entete de la page -->
+    <header>
+        <div class="logo">
+            <h1>Alkhidma Boutique</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--section de produits -->
+    <main>
+        <h2>Nos Produits</h2>
+        <section class="catalogue">
+            <!--produit N°1 -->
+            <div class="produit">
+                <div class="images">
+                    <img src="images/vetment arie.webp" alt="Chemise 1">
+                    <img src="images/logo.png.png" alt="Chemise 2">
+                    <img src="images/vetment arie.webp" alt="Chemise 3">
+                </div>
+                <h3>Chemise Élégante</h3>
+                <p>
+                    <span class="prix-barre">30€</span>
+                    <span class="prix">25€</span>
+                </p>
+                <p>Une chemise élégante et confortable, idéale pour toutes les occasions.</p>
+                <a href="https://wa.me/221762197184?text=Bonjour,%20je%20suis%20intéressé%20par%20ce%20produit%20:%20T-shirt.%20Pouvez-vous%20m’en%20dire%20plus%20?" class="btn-whatsapp">Commander via WhatsApp</a>
+            </div>
+            <!--produit N°2 -->
+            <div class="produit">
+                <div class="images">
+                    <img src="pantalon1.jpg" alt="Pantalon 1">
+                    <img src="pantalon2.jpg" alt="Pantalon 2">
+                    <img src="pantalon3.jpg" alt="Pantalon 3">
+                </div>
+                <h3>Pantalon Moderne</h3>
+                <p>
+                    <span class="prix-barre">35€</span>
+                    <span class="prix">30€</span>
+                </p>
+                <p>Un pantalon moderne et confortable pour un look parfait.</p>
+                <a href="https://wa.me/123456789" class="btn-whatsapp">Commander via WhatsApp</a>
+            </div>
+            <!--produit N°3 -->
+            <div class="produit">
+                <div class="images">
+                    <img src="images/vetment arie.webp" alt="Chemise 1">
+                    <img src="images/logo.png.png" alt="Chemise 2">
+                    <img src="images/vetment arie.webp" alt="Chemise 3">
+                </div>
+                <h3>Chemise Élégante</h3>
+                <p>
+                    <span class="prix-barre">30€</span>
+                    <span class="prix">25€</span>
+                </p>
+                <p>Une chemise élégante et confortable, idéale pour toutes les occasions.</p>
+                <a href="https://wa.me/123456789" class="btn-whatsapp">Commander via WhatsApp</a>
+            </div>
+            <!--produit N°4 -->
+            <div class="produit">
+                <div class="images">
+                    <img src="pantalon1.jpg" alt="Pantalon 1">
+                    <img src="pantalon2.jpg" alt="Pantalon 2">
+                    <img src="pantalon3.jpg" alt="Pantalon 3">
+                </div>
+                <h3>Pantalon Moderne</h3>
+                <p>
+                    <span class="prix-barre">35€</span>
+                    <span class="prix">30€</span>
+                </p>
+                <p>Un pantalon moderne et confortable pour un look parfait.</p>
+                <a href="https://wa.me/123456789" class="btn-whatsapp">Commander via WhatsApp</a>
+            </div>
+            <!-- Ajoutez plus de produits selon vos besoins -->
+        </section>
+        <!--bouton pour Revenir à l'accuil  -->
+        <div class="bouton-catalogue">
+            <a href="index.html" class="btn">Revenir à l'accuil</a>
+        </div>
+    </main>
+    <!--bouton pour Retourner en haut  -->
+    <button id="scrollToTop" title="Retourner en haut">↑</button>
+    <div id="myModal" class="modal">
+    
+</div>
+
+<p>&copy;Alkhidma Boutique</p>
+<!--le pied de la page  -->
+    <footer>
+        <p>&copy; 2025 Alkhidma Boutique. Tous droits réservés.</p>
+    </footer>
+    <script>
+        window.onscroll = function() {
+            const button = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        document.getElementById('scrollToTop').onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    </script>
+    
+</body>
+</html>
