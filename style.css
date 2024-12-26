@@ -1,0 +1,219 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #289db9;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+header .menu-hamburger {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .menu-nav {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top:35px;
+    left: 0px;
+    background-color: #289db9;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .menu-nav.visible {
+    display: flex;
+}
+
+header .menu-nav li {
+    margin: 10px 0;
+}
+
+header .menu-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Section bannière */
+.banniere {
+    background-image: url('images/vetment\ arie.webp');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
+    animation: zoomIn 10s infinite;
+}
+
+.banniere h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.banniere p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.banniere .btn {
+    background-color: #289db9;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* bouton de revenir à l'acceuil */
+.revenir {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
+}
+.revenir .btn {
+    background-color: #289db9;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold; 
+}
+/* Section produits */
+.produits {
+    padding: 20px;
+    text-align: center;
+}
+
+.produits h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.produit {
+    margin-bottom: 20px;
+}
+
+.produit img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produit .prix {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.produit .prix-barre {
+    text-decoration: line-through;
+    margin-right: 10px;
+    color: #999;
+}
+
+.produit .prix-actuel {
+    color: #289db9;
+    font-weight: bold;
+}
+
+.produit p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.produit .btn {
+    background-color: #289db9;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Section avis */
+.avis {
+    background-color: #f9f9f9; /* Couleur d'arrière-plan */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.avis h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #217c91; /* Couleur du titre */
+}
+
+.avis-client {
+    display: flex;
+    flex-direction: column; /* Aligne les avis en colonne */
+    align-items: center; /* Centre les avis */
+    gap: 20px; /* Espace entre les avis */
+    padding-top: 60px;
+    border: 3px solid #ddd; /* Bordure des avis */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #fff;
+}
+
+
+/* Pied de page */
+footer {
+    background-color: #289db9;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+/* Revenir en haut */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: none;
+    background-color: #289db9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+#scrollToTop:hover {
+    background-color: #217c91;
+}

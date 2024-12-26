@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Boutique Mobile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Entête -->
+    <header>
+        <nav>
+            <div class="logo">Alkhidma</div>
+            <button class="menu-hamburger" id="menu-button">☰</button>
+            <ul class="menu-nav" id="menu-nav">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Catalogue</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Section produits -->
+    <section class="produits" id="catalogue">
+        <h2>Nos produits phares</h2>
+        <div class="produit">
+            <img src="images/vetment arie.webp" alt="Produit 1">
+            <div class="prix">
+                <span class="prix-barre">50€</span>
+                <span class="prix-actuel">40€</span>
+            </div>
+            <p>Description courte du produit Un pantalon moderne et confortable pour un look parfait.Un pantalon moderne et confortable pour un look parfait.</p>
+            <a href="https://wa.me/yournumber" class="btn">Commander sur WhatsApp</a>
+        </div>
+        <div class="produit">
+            <img src="images/vetment arie.webp" alt="Produit 2">
+            <div class="prix">
+                <span class="prix-barre">70€</span>
+                <span class="prix-actuel">60€</span>
+            </div>
+            <p>Description courte du produit 2.</p>
+            <a href="https://wa.me/yournumber" class="btn">Commander sur WhatsApp</a>
+        </div>
+        <!-- Ajoutez d'autres produits ici -->
+    </section>
+<!-- Section revenir  -->
+<section class="revenir">
+    <div class="banniere-content">
+        <a href="index.html" class="btn">revenir à l'acceuil</a>
+    </div>
+</section>
+<!--bouton pour Retourner en haut  -->
+<button id="scrollToTop" title="Retourner en haut">↑</button>
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Boutique Mobile. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Script pour le Menu Hamburger
+        const menuButton = document.getElementById('menu-button');
+        const menuNav = document.getElementById('menu-nav');
+
+        menuButton.addEventListener('click', () => {
+            menuNav.classList.toggle('visible');
+        });
+    </script>
+     <script>
+        window.onscroll = function() {
+            const button = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        document.getElementById('scrollToTop').onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    </script>
+</body>
+</html>
