@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Boutique Mobile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Entête -->
+    <header>
+        <nav>
+            <div class="logo">Alkhidma</div>
+            <button class="menu-hamburger" id="menu-button">☰</button>
+            <ul class="menu-nav" id="menu-nav">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Section produits -->
+    <h2 class="Nosproduits">Notre catalogue</h2>
+    <section class="produits" id="catalogue">
+        <div class="produit scale-in">
+            <img src="images/vetment arie.webp" alt="Produit 1">
+            <div class="prix">
+                <span class="prix-barre">50€</span>
+                <span class="prix-actuel">40€</span>
+            </div>
+            <p>Description courte du produit Un pantalon moderne et confortable pour un look parfait.Un pantalon moderne et confortable pour un look parfait.</p>
+            <a href="https://wa.me/yournumber" class="btn">Commander sur WhatsApp</a>
+        </div>
+        <div class="produit scale-in">
+            <img src="images/vetment arie.webp" alt="Produit 1">
+            <div class="prix">
+                <span class="prix-barre">50€</span>
+                <span class="prix-actuel">40€</span>
+            </div>
+            <p>Description courte du produit Un pantalon moderne et confortable pour un look parfait.Un pantalon moderne et confortable pour un look parfait.</p>
+            <a href="https://wa.me/yournumber" class="btn">Commander sur WhatsApp</a>
+        </div>
+        <div class="produit scale-in">
+            <img src="images/vetment arie.webp" alt="Produit 2">
+            <div class="prix">
+                <span class="prix-barre">70€</span>
+                <span class="prix-actuel">60€</span>
+            </div>
+            <p>Description courte du produit 2.</p>
+            <a href="https://wa.me/yournumber" class="btn">Commander sur WhatsApp</a>
+        </div>
+        <!-- Ajoutez d'autres produits ici -->
+    </section>
+<!-- Section revenir  -->
+<section class="revenir">
+    <div class="banniere-content">
+        <a href="index.html" class="btn">revenir à l'acceuil</a>
+    </div>
+</section>
+<!--bouton pour Retourner en haut  -->
+<button id="scrollToTop" title="Retourner en haut">↑</button>
+<!-- dicution whatssapp-->
+<a href="https://wa.me/votrenumero" class="chat-button" target="_blank">
+    <img src="images/whatssapp.png" alt="WhatsApp">
+</a>
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Boutique Mobile. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Script pour le Menu Hamburger
+        const menuButton = document.getElementById('menu-button');
+        const menuNav = document.getElementById('menu-nav');
+        const menuLinks = document.querySelectorAll('#menu-nav a'); // Tous les liens du menu
+    
+        // Afficher ou masquer le menu lorsque le bouton est cliqué
+        menuButton.addEventListener('click', () => {
+            menuNav.classList.toggle('visible');
+        });
+    
+        // Masquer le menu lorsque l'utilisateur clique à l'extérieur
+        document.addEventListener('click', (event) => {
+            if (!menuNav.contains(event.target) && !menuButton.contains(event.target)) {
+                menuNav.classList.remove('visible');
+            }
+        });
+    
+        // Masquer le menu lorsque l'utilisateur clique sur un lien
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuNav.classList.remove('visible');
+            });
+        });
+    </script>
+    
+     <script>
+        window.onscroll = function() {
+            const button = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        document.getElementById('scrollToTop').onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    </script>
+    <script>
+        // Fonction pour vérifier si un élément est visible dans la fenêtre
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+        }
+    
+        // Ajouter la classe "visible" aux éléments lorsqu'ils entrent dans la vue
+        function handleScroll() {
+            const elements = document.querySelectorAll('.fade-in, .scale-in');
+            elements.forEach((element) => {
+                if (isInViewport(element)) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+    
+        // Écouter les événements de défilement et charger au démarrage
+        document.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>
