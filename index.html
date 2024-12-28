@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Boutique Mobile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--infos importantes -->
+    <div class="bandeau-info">Livraison gratuite pour les commandes de plus de 50000XOF !</div>
+    <!-- Entête -->
+    <header>
+        <nav>
+            <div class="logo">Alkhidma</div>
+            <button class="menu-hamburger" id="menu-button">☰</button>
+            <ul class="menu-nav" id="menu-nav">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="catalogue.html">Catalogue</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--pour Offre spéciale -->
+    <div class="promo-popup" id="promo-popup">
+        <span id="close-promo" class="close-icon">&times;</span>
+        <p>🚨 Offre spéciale : -20% sur tout le site !</p>
+    </div> 
+
+    <!-- Section bannière -->
+    <section class="banniere">
+        <div class="banniere-content fade-in">
+            <h1>Bienvenue dans notre boutique</h1>
+            <p>Découvrez nos vêtements exclusifs à des prix incroyables.</p>
+            <a href="catalogue.html" class="btn">Voir le catalogue</a>
+        </div>
+    </section>
+
+    <!-- Section produits -->
+    <h2 class="Nosproduits">Nos produits </h2>
+    <section class="produits" id="catalogue">   
+        <div class="produit">
+            <div class="images-produit">
+                <img src="images/vetment arie.webp" alt="Produit 1 - Image 1" class="image-miniature">
+                <img src="images/vetment arie.webp" alt="Produit 1 - Image 2" class="image-miniature">
+                <img src="images/cyber labo.png" alt="Produit 1 - Image 3" class="image-miniature">
+            </div>
+            <div class="prix">
+                <span class="prix-barre">50€</span>
+                <span class="prix-actuel">40€</span>
+            </div>
+            <p>Description courte du produit 1.</p>
+            <a href="https://wa.me/yournumber" class="btn">Commander sur WhatsApp</a>
+        </div>
+        <div class="produit">
+            <div class="images-produit">
+                <img src="images/vetment arie.webp" alt="Produit 1 - Image 1" class="image-miniature">
+                <img src="images/vetment arie.webp" alt="Produit 1 - Image 2" class="image-miniature">
+                <img src="images/cyber labo.png" alt="Produit 1 - Image 3" class="image-miniature">
+            </div>
+            <div class="prix">
+                <span class="prix-barre">50€</span>
+                <span class="prix-actuel">40€</span>
+            </div>
+            <p>Description courte du produit 1.</p>
+            <a href="https://wa.me/yournumber" class="btn">Commander sur WhatsApp</a>
+        </div>
+        <div class="produit">
+            <div class="images-produit">
+                <img src="images/vetment arie.webp" alt="Produit 1 - Image 1" class="image-miniature">
+                <img src="images/vetment arie.webp" alt="Produit 1 - Image 2" class="image-miniature">
+                <img src="images/cyber labo.png" alt="Produit 1 - Image 3" class="image-miniature">
+            </div>
+            <div class="prix">
+                <span class="prix-barre">50€</span>
+                <span class="prix-actuel">40€</span>
+            </div>
+            <p>Description courte du produit 1.</p>
+            <a href="https://wa.me/yournumber" class="btn">Commander sur WhatsApp</a>
+        </div>
+        <div class="produit">
+            <div class="images-produit">
+                <img src="images/vetment arie.webp" alt="Produit 1 - Image 1" class="image-miniature">
+                <img src="images/vetment arie.webp" alt="Produit 1 - Image 2" class="image-miniature">
+                <img src="images/cyber labo.png" alt="Produit 1 - Image 3" class="image-miniature">
+            </div>
+            <div class="prix">
+                <span class="prix-barre">50€</span>
+                <span class="prix-actuel">40€</span>
+            </div>
+            <p>Description courte du produit 1.</p>
+            <a href="https://wa.me/yournumber" class="btn">Commander sur WhatsApp</a>
+        </div>
+        
+        
+        <!-- Modal plein écran -->
+        <div id="fullscreen-modal" class="fullscreen-modal">
+            <span id="close-modal" class="close-modal">✖</span>
+            <div class="modal-content">
+                <img id="fullscreen-image" src="" alt="Image agrandie">
+                <div class="arrow left-arrow">←</div>
+                <div class="arrow right-arrow">→</div>
+            </div>
+        </div>
+        </div>
+        <!-- Ajoutez d'autres produits ici -->
+    </section>
+    <section class="revenir">
+        <div class="banniere-content">
+            <a href="catalogue.html" class="btn">voir plus</a>
+        </div>
+    </section>
+<!--bouton pour Retourner en haut  -->
+<button id="scrollToTop" title="Retourner en haut">↑</button>
+    <!-- Section avis des clients -->
+    <section class="avis ">
+        <h2>Avis de nos clients</h2>
+        <div class="avis-client scale-in ">
+            <p>"Super qualité et service rapide. Je recommande !" - Client 1</p>
+        </div>
+        <div class="avis-client scale-in">
+            <p>"Produits conformes à la description, merci !" - Client 2</p>
+        </div>
+        <!-- Ajoutez d'autres avis ici -->
+   </section>
+    <!-- dicution whatssapp-->
+   <a href="https://wa.me/votrenumero" class="chat-button" target="_blank">
+    <img src="images/whatssapp.png" alt="WhatsApp">
+</a>
+<!--Section FAQ -->
+<section class="faq">
+    <h2>Questions Fréquentes</h2>
+    <div class="faq-item">
+        <button class="faq-question">Quels sont les délais de livraison ?</button>
+        <div class="faq-answer">Les délais de livraison sont de 3 à 5 jours ouvrés.</div>
+    </div>
+    <div class="faq-item">
+        <button class="faq-question">Quels modes de paiement acceptez-vous ?</button>
+        <div class="faq-answer">Nous acceptons les paiements par carte bancaire, mobile money et PayPal.</div>
+    </div>
+</section>
+<!-- Système de commentaire avec validation -->
+<div class="comment-section">
+    <textarea id="comment-input" placeholder="Écrivez votre commentaire..."></textarea>
+    <div class="button-container">
+        <button id="submit-comment">Soumettre</button>
+    </div>
+    <div id="comments-display"></div>
+</div>
+<!-- le chatbot -->
+<!-- Bouton pour ouvrir le chatbot -->
+<button id="chatbot-toggle">💬</button>
+
+<!-- Fenêtre du chatbot -->
+<div id="chatbot-container">
+    <div id="chatbot-header">
+        <span>Abdou...</span>
+        <button id="close-chatbot" class="white-close-btn">✕</button>
+    </div>
+    <div id="chatbot-body">
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <input type="text" id="chatbot-input" placeholder="Écrivez votre message...">
+        <button id="send-message">Envoyer</button>
+    </div>
+</div>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 Boutique Mobile. Tous droits réservés.</p>
+    </footer>
+    <script>
+        // Script pour le Menu Hamburger
+        const menuButton = document.getElementById('menu-button');
+        const menuNav = document.getElementById('menu-nav');
+        const menuLinks = document.querySelectorAll('#menu-nav a'); // Tous les liens du menu
+    
+        // Afficher ou masquer le menu lorsque le bouton est cliqué
+        menuButton.addEventListener('click', () => {
+            menuNav.classList.toggle('visible');
+        });
+    
+        // Masquer le menu lorsque l'utilisateur clique à l'extérieur
+        document.addEventListener('click', (event) => {
+            if (!menuNav.contains(event.target) && !menuButton.contains(event.target)) {
+                menuNav.classList.remove('visible');
+            }
+        });
+    
+        // Masquer le menu lorsque l'utilisateur clique sur un lien
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuNav.classList.remove('visible');
+            });
+        });
+    </script>
+    
+     <script>
+        window.onscroll = function() {
+            const button = document.getElementById('scrollToTop');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    
+        document.getElementById('scrollToTop').onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    </script>
+    <script>
+        // Fonction pour vérifier si un élément est visible dans la fenêtre
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+        }
+    
+        // Ajouter la classe "visible" aux éléments lorsqu'ils entrent dans la vue
+        function handleScroll() {
+            const elements = document.querySelectorAll('.fade-in, .scale-in');
+            elements.forEach((element) => {
+                if (isInViewport(element)) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+    
+        // Écouter les événements de défilement et charger au démarrage
+        document.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+    <!--pour Offre spéciale -->
+    <script>
+        const promoPopup = document.getElementById('promo-popup');
+const closePromo = document.getElementById('close-promo');
+
+// Afficher la popup après 3 secondes
+setTimeout(() => {
+    promoPopup.style.display = 'flex'; // Utilisez 'flex' pour conserver la mise en page
+}, 3000); 
+
+// Masquer la popup lorsque l'utilisateur clique sur la croix
+closePromo.addEventListener('click', () => {
+    promoPopup.style.display = 'none';
+});
+ </script>
+ <!--Section FAQ -->
+ <script>const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach((question) => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+    </script>
+    <!-- Effet de défilement lent -->
+     <script>document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+<!-- Effet de défilement entre les images -->
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.images-produit img');
+    const modal = document.getElementById('fullscreen-modal');
+    const fullscreenImage = document.getElementById('fullscreen-image');
+    const closeModal = document.getElementById('close-modal');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    let currentIndex = 0;
+    let currentImages = [];
+
+    // Ouvrir le modal en plein écran
+    images.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            const parent = image.closest('.images-produit');
+            currentImages = Array.from(parent.querySelectorAll('img'));
+            currentIndex = currentImages.indexOf(image);
+
+            fullscreenImage.src = image.src;
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Fermer le modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Aller à l'image précédente
+    leftArrow.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            fullscreenImage.src = currentImages[currentIndex].src;
+        }
+    });
+
+    // Aller à l'image suivante
+    rightArrow.addEventListener('click', () => {
+        if (currentIndex < currentImages.length - 1) {
+            currentIndex++;
+            fullscreenImage.src = currentImages[currentIndex].src;
+        }
+    });
+
+    // Fermer le modal avec "Échap"
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
+        }
+    });
+});
+
+</script>
+ <!-- ajouter un defilement automatique -->
+<script>document.addEventListener('DOMContentLoaded', () => {
+    const imagesProduits = document.querySelectorAll('.images-produit');
+
+    imagesProduits.forEach((container) => {
+        let scrollAmount = 0;
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+        // Défilement automatique
+        let autoScroll = setInterval(() => {
+            container.scrollLeft += 1; // Ajustez la vitesse ici
+            scrollAmount += 1;
+
+            // Recommencer si le défilement atteint la fin
+            if (scrollAmount >= maxScrollLeft) {
+                container.scrollLeft = 0;
+                scrollAmount = 0;
+            }
+        }, 20); // Vitesse du défilement automatique (ms par mouvement)
+
+        // Arrêter le défilement automatique en cas d'interaction utilisateur
+        container.addEventListener('mouseover', () => clearInterval(autoScroll));
+        container.addEventListener('mouseout', () => {
+            autoScroll = setInterval(() => {
+                container.scrollLeft += 1;
+                scrollAmount += 1;
+                if (scrollAmount >= maxScrollLeft) {
+                    container.scrollLeft = 0;
+                    scrollAmount = 0;
+                }
+            }, 20);
+        });
+    });
+});
+</script>
+<script>
+    const phrases = ['Découvrez nos collections !', 'Des prix incroyables !', 'Qualité garantie !'];
+let phraseIndex = 0;
+
+setInterval(() => {
+    const banniereText = document.querySelector('.banniere-content h1');
+    banniereText.textContent = phrases[phraseIndex];
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+}, 3000);
+</script>
+<!-- Système de commentaire avec validation -->
+ <script>document.getElementById('submit-comment').addEventListener('click', () => {
+    const comment = document.getElementById('comment-input').value;
+    if (comment) {
+        const commentDisplay = document.getElementById('comments-display');
+        const newComment = document.createElement('div');
+        newComment.textContent = comment;
+        commentDisplay.appendChild(newComment);
+        document.getElementById('comment-input').value = ''; // Réinitialiser le champ
+    } else {
+        alert('Veuillez entrer un commentaire.');
+    }
+});
+</script>
+<script>// Sélectionner les éléments
+    const chatbotToggle = document.getElementById("chatbot-toggle");
+    const chatbotContainer = document.getElementById("chatbot-container");
+    const closeChatbot = document.getElementById("close-chatbot");
+    const sendMessageBtn = document.getElementById("send-message");
+    const chatbotMessages = document.getElementById("chatbot-messages");
+    const chatbotInput = document.getElementById("chatbot-input");
+    
+    // Ouvrir le chatbot
+    chatbotToggle.addEventListener("click", () => {
+        chatbotContainer.style.display = "flex";
+        chatbotToggle.style.display = "none";
+    });
+    
+    // Fermer le chatbot
+    closeChatbot.addEventListener("click", () => {
+        chatbotContainer.style.display = "none";
+        chatbotToggle.style.display = "block";
+    });
+    
+    // Fonction pour ajouter un message
+    function addMessage(text, sender) {
+        const message = document.createElement("div");
+        message.className = `chatbot-message ${sender}`;
+        message.textContent = text;
+        chatbotMessages.appendChild(message);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+    
+    // Fonction pour répondre automatiquement
+    function botReply(userMessage) {
+        const responses = {
+            "bonjour": "Bonjour ! Comment puis-je vous aider ?",
+            "produits": "Nous avons de superbes vêtements. Consultez notre catalogue !",
+            "contact": "Vous pouvez nous contacter via WhatsApp ou par email.",
+            "merci": "Avec plaisir ! 😊"
+        };
+    
+        const reply = responses[userMessage.toLowerCase()] || "Je ne comprends pas encore cette question. Pouvez-vous essayer autre chose ?";
+        addMessage(reply, "bot");
+    }
+    
+    // Envoyer un message
+    sendMessageBtn.addEventListener("click", () => {
+        const userMessage = chatbotInput.value.trim();
+        if (userMessage) {
+            addMessage(userMessage, "user");
+            chatbotInput.value = "";
+            setTimeout(() => botReply(userMessage), 500);
+        }
+    });
+    
+    // Permettre d'envoyer avec Entrée
+    chatbotInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            sendMessageBtn.click();
+        }
+    });
+    </script>
+</body>
+</html>
