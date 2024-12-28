@@ -1,0 +1,595 @@
+/* Styles généraux */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #289db9;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+header .menu-hamburger {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+header .menu-nav {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top:35px;
+    left: 0px;
+    background-color: #289db9;
+    border-radius: 5px;
+    padding:0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100px;
+}
+
+header .menu-nav.visible {
+    display: flex;
+}
+
+header .menu-nav li {
+    margin: 10px 0;
+}
+
+header .menu-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+/* Section bannière */
+.banniere {
+    background-image: url('images/vetment\ arie.webp');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
+    animation: zoomIn 10s infinite;
+}
+
+.banniere h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.banniere p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.banniere .btn {
+    background-color: #289db9;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* bouton de revenir à l'acceuil */
+.revenir {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
+}
+.revenir .btn {
+    background-color: #289db9;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold; 
+}
+/* Section produits */
+.Nosproduits { 
+    text-align: center;
+}
+.produits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espace entre les produits */
+    justify-content: center;
+}
+
+.produits .produit {
+    flex: 0 1 calc(25% - 10px); /* Chaque produit occupe 25% de la largeur moins l'espace entre */
+    box-sizing: border-box; /* Inclut le padding et les bordures dans la largeur totale */
+    text-align: center; /* Centrer le contenu des produits */
+    background-color: #f9f9f9; /* Couleur de fond optionnelle */
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #ddd; /* Bordure optionnelle */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.produits .produit img {
+    width: 100%; /* Image prend la largeur disponible */
+    height: auto; /* Conserve les proportions */
+    max-width: 120px; /* Limite la taille de l'image */
+   
+}
+
+.produits .produit .prix {
+    display: flex;
+    justify-content: center;
+    gap: 5px; /* Espace entre les prix */
+    margin-top: 5px;
+    font-size: 0.9rem; /* Taille réduite pour les petits écrans */
+}
+
+.produits .produit .prix-barre {
+    text-decoration: line-through;
+    color: #888; /* Couleur du prix barré */
+}
+
+.produits .produit .prix-actuel {
+    color: #289db9; /* Couleur principale */
+    font-weight: bold;
+}
+
+.produits .produit p {
+    font-size: 0.8rem; /* Taille réduite pour les descriptions */
+    margin: 10px 0;
+}
+
+.produits .produit .btn {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    background-color: #289db9;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.produits .produit .btn:hover {
+    background-color: #217f94; /* Couleur au survol */
+}
+
+/* Styles spécifiques aux écrans mobiles */
+@media (max-width: 768px) {
+    .produits .produit {
+        flex: 0 1 calc(50% - 5px); /* Toujours deux par ligne sur les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .produits .produit {
+        flex: 0 1 calc(50% - 5px); /* Un seul produit par ligne sur les très petits écrans */
+    }
+
+    .produits .produit img {
+        max-width: 100px; /* Réduction supplémentaire pour les petits écrans */
+    }
+
+    .produits .produit p, .produits .produit .btn {
+        font-size: 0.7rem; /* Réduction de la taille du texte */
+    }
+}
+
+/* Section avis */
+.avis {
+    background-color: #f9f9f9; /* Couleur d'arrière-plan */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.avis h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #217c91; /* Couleur du titre */
+}
+
+.avis-client {
+    display: flex;
+    flex-direction: column; /* Aligne les avis en colonne */
+    align-items: center; /* Centre les avis */
+    gap: 20px; /* Espace entre les avis */
+    padding-top: 60px;
+    border: 3px solid #ddd; /* Bordure des avis */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour un effet de profondeur */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #fff;
+}
+
+
+/* Pied de page */
+footer {
+    background-color: #289db9;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+/* Revenir en haut */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    display: none;
+    background-color: #289db9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+#scrollToTop:hover {
+    background-color: #217c91;
+}
+/*infos importanates en haut de la page*/
+.bandeau-info {
+    background-color: #f0ad4e; /* Couleur de fond */
+    color: white;
+    text-align: center;
+    padding: 2px;
+    position: relative;
+    top: 0;
+    
+    z-index: 1000; /* Au-dessus des autres éléments */
+    
+}
+/* Cartes de produits animées */
+.produit {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+/* Style de base pour l'animation (fonctionalites suplementaires */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Déplace légèrement l'élément vers le bas */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Lorsque l'élément est visible */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0); /* Remet l'élément à sa position d'origine */
+}
+
+/* Animation pour les produits */
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9); /* Réduit légèrement la taille de l'élément */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1); /* Taille normale */
+}
+/* pour dicuion whatssapp */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #25d366;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.chat-button:hover {
+    transform: scale(1.1);
+}
+
+.chat-button img {
+    width: 30px;
+    height: 30px;
+}
+/* pour Offre spéciale */
+.promo-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: #ff4444;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: none; /* Masquée par défaut */
+    justify-content: center; /* Centrer le contenu */
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* Assurez-vous que rien ne déborde */
+}
+
+.close-icon {
+    position: absolute;
+    top: 5px; /* Distance par rapport au haut de la popup */
+    right: 10px; /* Distance par rapport au bord droit */
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    transition: color 0.3s;
+}
+
+.close-icon:hover {
+    color: #ddd;
+}
+/* Section FAQ */
+.faq {
+    padding: 20px;
+}
+.faq h2 {
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: center;
+    background: #289db9;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #207a93;
+}
+
+.faq-answer {
+    display: none;
+    background: #f9f9f9;
+    padding: 10px;
+    text-align: center;
+}
+/* Animations des boutons au survol */
+.btn {
+    position: relative;
+    overflow: hidden;
+    background-color: #289db9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #207a93;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    transition: height 0.3s ease-in-out;
+}
+
+.btn:hover::after {
+    height: 100%;
+}
+.images-produit {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    scrollbar-width: none; /* Masquer la barre de défilement sur Firefox */
+    -ms-overflow-style: none; /* Masquer la barre de défilement sur Internet Explorer */
+}
+
+.images-produit::-webkit-scrollbar {
+    display: none; /* Masquer la barre de défilement sur Chrome, Edge, Safari */
+}
+
+/* Images horizontales */
+.images-produit {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+}
+
+.images-produit img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s, border 0.3s;
+}
+
+.images-produit img:hover {
+    transform: scale(1.1);
+    border-color: #289db9;
+}
+
+/* Modal plein écran */
+.fullscreen-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#fullscreen-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+/* pour le bandeau-info */
+.bandeau-info {
+    animation: clignoter 1s infinite;
+}
+
+@keyframes clignoter {
+    50% {
+        opacity: 0;
+    }
+}
+/* Styles pour la section de commentaires */
+.comment-section {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #289db9; /* Bordure colorée pour délimiter la section */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Fond clair */
+}
+
+/* Champ de saisie pour le commentaire */
+#comment-input {
+    width: 90%; /* Remplit la largeur de la section */
+    height: 100px; /* Hauteur du champ de saisie */
+    padding: 10px; /* Espace intérieur */
+    border: 1px solid #ccc; /* Bordure grise claire */
+    border-radius: 4px; /* Coins arrondis */
+    resize: none; /* Désactive le redimensionnement */
+    font-size: 16px; /* Taille de police */
+    margin-bottom: 10px; /* Marge en bas */
+    
+}
+
+/* Bouton de soumission */
+#submit-comment {
+    background-color: #289db9; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 10px 15px; /* Espace intérieur */
+    font-size: 16px; /* Taille de police */
+    cursor: pointer; /* Pointeur de main */
+    transition: background-color 0.3s; /* Transition pour le changement de couleur */
+    align-items: center;
+}
+
+/* Effet au survol du bouton */
+#submit-comment:hover {
+    background-color: #1a7d99; /* Couleur plus foncée au survol */
+}
+
+/* Styles pour l'affichage des commentaires */
+#comments-display {
+    margin-top: 15px; /* Marge en haut pour séparer des commentaires */
+}
+
+/* Style pour chaque commentaire */
+#comments-display div {
+    background-color: #ffffff; /* Fond blanc pour les commentaires */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 10px; /* Espace intérieur */
+    margin-bottom: 10px; /* Marge en bas entre les commentaires */
+    font-size: 14px; /* Taille de police pour les commentaires */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner un effet de profondeur */
+}
+.button-container {
+    text-align: center; /* Centre le contenu horizontalement */
+    margin-top: 10px; /* Ajoute un peu d'espace au-dessus du conteneur */
+}
+
+/* Reste du CSS comme précédemment */
+
+
+
+
