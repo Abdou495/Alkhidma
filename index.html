@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Marketplace - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+    <div class="navbar">
+        <div class="logo">Ednom°</div>
+            
+                <ul class="links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="Catégories.html">Catégories</a></li>
+                    <li><a href="#produits">Produits</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="Button">
+                    <a href="" class="Button-action">Se connecter</a>
+                </div>
+                <div class="menu-hambourguer-butoon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+    </div>
+    <div class="menu-hambourguer ">
+        <ul class="links">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="Catégories.html">Catégories</a></li>
+            <li><a href="#produits">Produits</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <div class="divider"></div>
+            <div class="Button-menu-hambourguer">
+                <a href="" class="Button-action">Se connecter</a>
+            </div>
+        </ul>
+    </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Bienvenue sur notre Marketplace</h2>
+            <p>Trouvez tout ce dont vous avez besoin, en un seul endroit.</p>
+            <a href="#produits" class="btn">Explorer les produits</a>
+        </div>
+    </section>
+    <div class="categories-products">
+    <!-- Categories Section -->
+    <section id="categories" class="categories">
+        <div class="container">
+            <h2>Nos Catégories</h2>
+            <div class="categories-grid">
+                <div class="category-item">Mode</div>
+                <div class="category-item">Maison</div>
+                <div class="category-item">Électronique</div>
+                <div class="category-item">Sport</div>
+                <div class="category-item">Électronique</div>
+                <div class="category-item">Sport</div>
+            </div>
+        </div>   
+    </section>
+    
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <h2>Nos Produits</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="images/vetment arie.webp" alt="Produit 1" class="product-image">
+                    <h3>Produit 1</h3>
+                    <p class="price">
+                        <span class="old-price">29.99 €</span>
+                        <span class="new-price">25.99 €</span>
+                    </p>
+                    <a href="https://wa.me/123456789?text=Je%20suis%20int%C3%A9ress%C3%A9%20par%20Produit%201" class="whatsapp-btn">Commander</a>
+                </div>
+    
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="images/product2.jpg" alt="Produit 2" class="product-image">
+                    <h3>Produit 2</h3>
+                    <p class="price">
+                        <span class="old-price">49.99 €</span>
+                        <span class="new-price">45.50 €</span>
+                    </p>
+                    <a href="https://wa.me/123456789?text=Je%20suis%20int%C3%A9ress%C3%A9%20par%20Produit%202" class="whatsapp-btn">Commander</a>
+                </div>
+    
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="images/product3.jpg" alt="Produit 3" class="product-image">
+                    <h3>Produit 3</h3>
+                    <p class="price">
+                        <span class="old-price">219.99 €</span>
+                        <span class="new-price">199.99 €</span>
+                    </p>
+                    <a href="https://wa.me/123456789?text=Je%20suis%20int%C3%A9ress%C3%A9%20par%20Produit%203" class="whatsapp-btn">Commander</a>
+                </div>
+    
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="images/product4.jpg" alt="Produit 4" class="product-image">
+                    <h3>Produit 4</h3>
+                    <p class="price">
+                        <span class="old-price">19.99 €</span>
+                        <span class="new-price">15.00 €</span>
+                    </p>
+                    <a href="https://wa.me/123456789?text=Je%20suis%20int%C3%A9ress%C3%A9%20par%20Produit%204" class="whatsapp-btn">Commander</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Marketplace. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script>
+        const menuHambourguerButton = document.querySelector(".menu-hambourguer-butoon");
+        const menuHambourguerButtonIcon = document.querySelector(".menu-hambourguer-butoon i");
+        const menuHambourguer = document.querySelector(".menu-hambourguer");
+    
+        // Fonction pour basculer l'état du menu
+        menuHambourguerButton.onclick = function (e) {
+            e.stopPropagation(); // Empêche la propagation du clic au document
+            menuHambourguer.classList.toggle("ouvert");
+            const isOuvert = menuHambourguer.classList.contains("ouvert");
+            menuHambourguerButtonIcon.className = isOuvert ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+        };
+    
+        // Fonction pour fermer le menu si l'utilisateur clique ailleurs
+        document.onclick = function () {
+            if (menuHambourguer.classList.contains("ouvert")) {
+                menuHambourguer.classList.remove("ouvert");
+                menuHambourguerButtonIcon.className = "fa-solid fa-bars";
+            }
+        };
+    
+        // Empêche la fermeture si on clique dans le menu
+        menuHambourguer.onclick = function (e) {
+            e.stopPropagation(); // Empêche le clic d'atteindre le document
+        };
+    </script>
+    <script>
+        
+    </script>
+</body>
+</html>
