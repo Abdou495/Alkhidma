@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>EdnomCercle – À propos </title>
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+         <!-- Element pour afficher le message avec un bouton de fermeture -->
+<div id="message" style="display: none; color: red; padding: 10px; background-color: #f8d7da; margin-top: 10px; position: relative;">
+    Cette fonctionnalité n'est pas encore disponible.
+    <button id="closeMessageBtn" style="position:absolute; top: 5px; right: 10px; background: none; border: none; font-size: 16px; cursor: pointer;">&#10006;</button>
+</div>
+
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="images/Ednom_logo.png" alt="logo"></a></div>
+            <ul class="links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Catégories.html">Produits</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="à propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="Button">
+                <a href="#" id="connectBtn" class="Button-action">Se connecter</a>
+            </div>
+            <div class="menu-hambourguer-butoon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        
+        <div class="menu-hambourguer">
+            <ul class="links" id="links-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Catégories.html">Produits</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="à propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="divider"></div>
+                <div class="Button-menu-hambourguer" id="Se-connecter">
+                    <a href="#" id="connectBtnMobile" class="Button-action">Se connecter</a>
+                </div>
+            </ul>
+        </div>
+        <div class="section-separateur"></div> <!-- Nouveau separator -->
+    </header>
+    <!-- Section À propos -->
+    <section class="about-us">
+        <div class="container">
+            <h1>À propos de nous</h1>
+            <p>Bienvenue chez EdnomCercle, où la technologie rencontre la formation et le commerce pour offrir des solutions innovantes. Nous sommes passionnés par la création d’un environnement accessible qui permet à nos clients d'apprendre, de vendre et d'acheter efficacement.</p>
+            <p>Notre mission est de faciliter les ventes, les achats, et l'apprentissage à distance tout en connectant les entrepreneurs et en proposant des services personnalisés comme l'infographie et la création de bases de données. Chez EdnomCercle, nous valorisons l'innovation, la collaboration, et l'accessibilité.</p>
+
+            <h2>Notre Vision</h2>
+            <p>Devenir un leader mondial dans le domaine du commerce en ligne et de la formation numérique.</p>
+
+            <h2>Nos Valeurs</h2>
+            <ul>
+                <li><strong>Innovation</strong> – Exploiter les technologies modernes pour créer des solutions uniques.</li>
+                <li><strong>Accessibilité</strong> – Rendre les outils d'apprentissage et de commerce disponibles à tous.</li>
+                <li><strong>Collaboration</strong> – Créer des partenariats solides pour un succès mutuel.</li>
+            </ul>
+
+            <h2>Rencontrez notre équipe</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="images/phone2.PNG" alt="Nom du membre">
+                    <h3>Jean Dupont</h3>
+                    <p>Directeur Général</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/phone2.PNG" alt="Nom du membre">
+                    <h3>Marie Curie</h3>
+                    <p>Responsable Marketing</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/phone2.PNG" alt="Nom du membre">
+                    <h3>Ahmed Sylla</h3>
+                    <p>Chef de Projet</p>
+                </div>
+            </div>
+
+            <h2>Nos Services</h2>
+            <ul>
+                <li>Vente de produits divers</li>
+                <li>Formation en ligne sur différents thèmes</li>
+                <li>Services de création de bases de données</li>
+                <li>Infographie et design personnalisés</li>
+            </ul>
+
+        </div>
+    </section>
+    <!-- Section FAQ -->
+<section class="faq">
+    <div class="container">
+        <h2>Foire aux Questions (FAQ)</h2>
+        <div class="faq-item">
+            <h3 class="question">Qu'est-ce qu'EdnomCercle ?</h3>
+            <p class="answer">EdnomCercle est une plateforme qui combine le commerce en ligne et la formation numérique, visant à aider les entrepreneurs à vendre, acheter et apprendre efficacement.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="question">Comment puis-je acheter des produits sur EdnomCercle ?</h3>
+            <p class="answer">Pour acheter des produits, il vous suffit de vous inscrire sur notre plateforme, de parcourir nos catégories, d'ajouter des produits à votre panier et de suivre les instructions de paiement.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="question">Proposez-vous des formations en ligne ?</h3>
+            <p class="answer">Oui, nous proposons des formations en ligne dans divers domaines, y compris le commerce numérique, le marketing et la création de bases de données.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="question">Comment puis-je accéder aux services d'infographie ?</h3>
+            <p class="answer">Vous pouvez accéder à nos services d'infographie en nous contactant directement via notre plateforme ou en remplissant le formulaire de demande de service.</p>
+        </div>
+        <div class="faq-item">
+            <h3 class="question">Quels sont les moyens de paiement acceptés ?</h3>
+            <p class="answer">Nous acceptons plusieurs moyens de paiement, y compris les cartes de crédit, les virements bancaires et d'autres options numériques courantes.</p>
+        </div>
+    </div>
+</section>
+
+
+    <script>
+        const menuHambourguerButton = document.querySelector(".menu-hambourguer-butoon");
+        const menuHambourguerButtonIcon = document.querySelector(".menu-hambourguer-butoon i");
+        const menuHambourguer = document.querySelector(".menu-hambourguer");
+    
+        // Fonction pour basculer l'état du menu
+        menuHambourguerButton.onclick = function (e) {
+            e.stopPropagation(); // Empêche la propagation du clic au document
+            menuHambourguer.classList.toggle("ouvert");
+            const isOuvert = menuHambourguer.classList.contains("ouvert");
+            menuHambourguerButtonIcon.className = isOuvert ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+        };
+    
+        // Fonction pour fermer le menu si l'utilisateur clique ailleurs
+        document.onclick = function () {
+            if (menuHambourguer.classList.contains("ouvert")) {
+                menuHambourguer.classList.remove("ouvert");
+                menuHambourguerButtonIcon.className = "fa-solid fa-bars";
+            }
+        };
+    
+        // Empêche la fermeture si on clique dans le menu
+        menuHambourguer.onclick = function (e) {
+            e.stopPropagation(); // Empêche le clic d'atteindre le document
+        };
+    </script>
+    <script>
+        // Sélectionner les boutons "Se connecter"
+        const connectButtons = document.querySelectorAll('#connectBtn, #connectBtnMobile');
+        const messageElement = document.getElementById('message');
+        const closeMessageBtn = document.getElementById('closeMessageBtn');
+    
+        // Ajouter l'événement de clic pour afficher le message
+        connectButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Empêcher la redirection du lien
+                messageElement.style.display = 'block'; // Afficher le message
+            });
+        });
+    
+        // Ajouter l'événement de clic pour fermer le message
+        closeMessageBtn.addEventListener('click', function() {
+            messageElement.style.display = 'none'; // Cacher le message
+        });
+    </script>
+
+<script>
+    // Code pour l'interaction de la FAQ
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.question');
+        question.addEventListener('click', () => {
+            // Toggle la classe active pour afficher/masquer la réponse
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>
