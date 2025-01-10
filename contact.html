@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Marketplace - Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Element pour afficher le message avec un bouton de fermeture -->
+<div id="message" style="display: none; color: red; padding: 10px; background-color: #f8d7da; margin-top: 10px; position: relative;">
+    Cette fonctionnalité n'est pas encore disponible.
+    <button id="closeMessageBtn" style="position: absolute; top: 5px; right: 10px; background: none; border: none; font-size: 16px; cursor: pointer;">&#10006;</button>
+</div>
+
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="images/Ednom_logo.png" alt="logo"></a></div>
+            <ul class="links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Catégories.html">Produits</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="Button">
+                <a href="#" id="connectBtn" class="Button-action">Se connecter</a>
+            </div>
+            <div class="menu-hambourguer-butoon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        
+        <div class="menu-hambourguer">
+            <ul class="links" id="links-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Catégories.html">Produits</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="divider"></div>
+                <div class="Button-menu-hambourguer" id="Se-connecter">
+                    <a href="#" id="connectBtnMobile" class="Button-action">Se connecter</a>
+                </div>
+            </ul>
+        </div>
+        <div class="section-separateur"></div> <!-- Nouveau separator -->
+    </header>
+    
+    
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Contactez-nous</h2>
+        <p>Nous sommes là pour vous aider. Remplissez le formulaire ci-dessous pour nous contacter.</p>
+        <form action="traitement-contact.php" method="post">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="sujet">Sujet :</label>
+            <input type="text" id="sujet" name="sujet" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Réseaux sociaux -->
+    <section class="social-media">
+        <h3>Suivez-nous</h3>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <p>&copy; 2025 EdnomCercle. Tous droits réservés.</p>
+    </footer>
+    <script>
+        // Sélectionne le formulaire de contact
+const contactForm = document.querySelector('.contact form');
+
+// Ajoute un événement 'submit' au formulaire
+contactForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Empêche l'envoi réel du formulaire
+    alert("Merci pour votre message cliquez sur ok pou confirmer."); // Affiche le message de confirmation
+    contactForm.reset(); // Réinitialise les champs du formulaire
+});
+
+    </script>
+    <script>
+        // Sélectionne tous les liens de la classe social-icons
+const socialIcons = document.querySelectorAll('.social-icons a');
+
+// Ajoute un événement 'click' à chaque lien
+socialIcons.forEach(icon => {
+    icon.addEventListener('click', (event) => {
+        event.preventDefault(); // Empêche la redirection par défaut
+        alert("Désolé, cette fonctionnalité n'est pas encore disponible.");
+    });
+});
+
+    </script>
+    <script>
+        const menuHambourguerButton = document.querySelector(".menu-hambourguer-butoon");
+        const menuHambourguerButtonIcon = document.querySelector(".menu-hambourguer-butoon i");
+        const menuHambourguer = document.querySelector(".menu-hambourguer");
+    
+        // Fonction pour basculer l'état du menu
+        menuHambourguerButton.onclick = function (e) {
+            e.stopPropagation(); // Empêche la propagation du clic au document
+            menuHambourguer.classList.toggle("ouvert");
+            const isOuvert = menuHambourguer.classList.contains("ouvert");
+            menuHambourguerButtonIcon.className = isOuvert ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+        };
+    
+        // Fonction pour fermer le menu si l'utilisateur clique ailleurs
+        document.onclick = function () {
+            if (menuHambourguer.classList.contains("ouvert")) {
+                menuHambourguer.classList.remove("ouvert");
+                menuHambourguerButtonIcon.className = "fa-solid fa-bars";
+            }
+        };
+    
+        // Empêche la fermeture si on clique dans le menu
+        menuHambourguer.onclick = function (e) {
+            e.stopPropagation(); // Empêche le clic d'atteindre le document
+        };
+    </script>
+    <script>
+        // Sélectionner les boutons "Se connecter"
+        const connectButtons = document.querySelectorAll('#connectBtn, #connectBtnMobile');
+        const messageElement = document.getElementById('message');
+        const closeMessageBtn = document.getElementById('closeMessageBtn');
+    
+        // Ajouter l'événement de clic pour afficher le message
+        connectButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Empêcher la redirection du lien
+                messageElement.style.display = 'block'; // Afficher le message
+            });
+        });
+    
+        // Ajouter l'événement de clic pour fermer le message
+        closeMessageBtn.addEventListener('click', function() {
+            messageElement.style.display = 'none'; // Cacher le message
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
