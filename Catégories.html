@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>EdnomCercle – Produits  </title>
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Element pour afficher le message avec un bouton de fermeture -->
+<div id="message" style="display: none; color: red; padding: 10px; background-color: #f8d7da; margin-top: 10px; position: relative;">
+    Cette fonctionnalité n'est pas encore disponible.
+    <button id="closeMessageBtn" style="position: absolute; top: 5px; right: 10px; background: none; border: none; font-size: 16px; cursor: pointer;">&#10006;</button>
+</div>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="images/Ednom_logo.png" alt="logo"></a></div>
+            <ul class="links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Catégories.html">Produits</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="à propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="Button">
+                <a href="#" id="connectBtn" class="Button-action">Se connecter</a>
+            </div>
+            <div class="menu-hambourguer-butoon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        
+        <div class="menu-hambourguer">
+            <ul class="links" id="links-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Catégories.html">Produits</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="à propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="divider"></div>
+                <div class="Button-menu-hambourguer" id="Se-connecter">
+                    <a href="#" id="connectBtnMobile" class="Button-action">Se connecter</a>
+                </div>
+            </ul>
+        </div>
+        <div class="section-separateur"></div> <!-- Nouveau separator -->
+    </header>
+    
+    <!-- Partie barre de recherche -->
+    <div class="search-container">
+        <input type="text" id="searchInput" onfocus="showSuggestions()" oninput="searchProducts()" placeholder="Rechercher un produit...">
+        <div class="suggestions" style="display: none;">
+            <!-- Les suggestions seront générées dynamiquement ici -->
+        </div>
+        <div id="resultsContainer" class="results"></div>
+    </div>
+    
+    <!-- Section des produits... -->
+    <section class="categories">
+        <div class="category">
+            <div class="category-products" id="categoryProducts1">
+                <div class="produit">
+                    <img src="images/p1_1.png" alt="p1">
+                    <h3>🤖🍞 Robot Pâtissier 6,5 L - 1300W</h3>
+                    <div class="prix">25,000 XOF</div>
+                    <button onclick="showProductDetails('p1')">Voir détails</button>
+                </div>      
+                <div class="produit">
+                    <img src="images/p1_2.jpg" alt="p2">
+                    <h3>smartphone</h3>
+                    <div class="prix">25,000 XOF</div>
+                    <button onclick="showProductDetails('p2')">Voir détails</button>
+                </div>  
+                <div class="produit">
+                    <img src="images/p1-1.jpg" alt="Phone">
+                    <h3>pantalon</h3>
+                    <div class="prix">19,500 XOF</div>
+                    <button onclick="showProductDetails('p1-1')">Voir détails</button>
+                </div>      
+                <div class="produit">
+                    <img src="images/phone1.png" alt="Phone">
+                    <h3>ecouteur</h3>
+                    <div class="prix">19,500 XOF</div>
+                    <button onclick="showProductDetails('p4')">Voir détails</button>
+                </div>      
+                <div class="produit">
+                    <img src="images/phone1.png" alt="Phone">
+                    <h3>Chocolat</h3>
+                    <div class="prix">19,500 XOF</div>
+                    <button onclick="showProductDetails('fffff')">Voir détails</button>
+                </div>      
+                <div class="produit">
+                    <img src="images/phone1.png" alt="Phone">
+                    <h3>Bouteille</h3>
+                    <div class="prix">19,500 XOF</div>
+                    <button onclick="showProductDetails('fffff')">Voir détails</button>
+                </div>      
+                <div class="produit">
+                    <img src="images/phone1.png" alt="Phone">
+                    <h3>Phone</h3>
+                    <div class="prix">19,500 XOF</div>
+                    <button onclick="showProductDetails('fffff')">Voir détails</button>
+                </div>      
+                <div class="produit">
+                    <img src="images/phone1.png" alt="Phone">
+                    <h3>chargeur</h3>
+                    <div class="prix">19,500 XOF</div>
+                    <button onclick="showProductDetails('fffff')">Voir détails</button>
+                </div>      
+                <div class="produit">
+                    <img src="images/phone1.png" alt="Phone">
+                    <h3>casque</h3>
+                    <div class="prix">19,500 XOF</div>
+                    <button onclick="showProductDetails('fffff')">Voir détails</button>
+                </div>      
+                <div class="produit">
+                    <img src="images/phone1.png" alt="Phone">
+                    <h3>Phone</h3>
+                    <div class="prix">19,500 XOF</div>
+                    <button onclick="showProductDetails('fffff')">Voir détails</button>
+                </div>          
+                <!-- D'autres produits ici... -->
+            </div>  
+        </div>  
+       <!-- Flèche de droite à gauche vers la page d'accueil -->
+    <div class="arrow-container">
+        <a href="index.html" class="arrow-btn arrow-left">
+            <i class="fa fa-arrow-left"></i>
+        </a>
+    </div>
+    </section>
+    
+
+ 
+
+<!-- Fenêtre modale pour afficher les détails du produit -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="slider">
+            <div class="slider-wrapper" id="sliderWrapper">
+                <img id="modalImg1" src="" alt="Product Image">
+                <img id="modalImg2" src="" alt="Product Image">
+                <img id="modalImg3" src="" alt="Product Image">
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <h3 id="modalTitle"></h3>
+        <div id="modalPriceContainer">
+            <span id="modalOldPrice" class="old-price"></span>
+            <span id="modalNewPrice" class="new-price"></span>
+        </div>
+        <p id="modalDescription"></p>
+        <a id="modalWhatsApp" class="btn" href="" target="_blank">Commander sur WhatsApp</a>
+    </div>
+</div>
+
+ <!-- Footer -->
+ <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>EdnomCercle</h4>
+            <p>Votre destination pour le commerce électronique et l'apprentissage en ligne.</p>
+            <p><a href="à propos.html">En savoir plus sur nous...</a></p>
+        </div>
+        <div class="footer-section">
+            <h4>Liens rapides</h4>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Catégories.html">Produits</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Suivez-nous</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Email : contact@ednomcercle.com</p>
+            <p>Téléphone : +221 78 958 60 31</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 EdnomCercle. Tous droits réservés.</p>
+    </div>
+</footer>
+
+    <script>
+        const menuHambourguerButton = document.querySelector(".menu-hambourguer-butoon");
+        const menuHambourguerButtonIcon = document.querySelector(".menu-hambourguer-butoon i");
+        const menuHambourguer = document.querySelector(".menu-hambourguer");
+    
+        // Fonction pour basculer l'état du menu
+        menuHambourguerButton.onclick = function (e) {
+            e.stopPropagation(); // Empêche la propagation du clic au document
+            menuHambourguer.classList.toggle("ouvert");
+            const isOuvert = menuHambourguer.classList.contains("ouvert");
+            menuHambourguerButtonIcon.className = isOuvert ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+        };
+    
+        // Fonction pour fermer le menu si l'utilisateur clique ailleurs
+        document.onclick = function () {
+            if (menuHambourguer.classList.contains("ouvert")) {
+                menuHambourguer.classList.remove("ouvert");
+                menuHambourguerButtonIcon.className = "fa-solid fa-bars";
+            }
+        };
+    
+        // Empêche la fermeture si on clique dans le menu
+        menuHambourguer.onclick = function (e) {
+            e.stopPropagation(); // Empêche le clic d'atteindre le document
+        };
+    </script>
+    <script>
+        // Sélectionner les boutons "Se connecter"
+        const connectButtons = document.querySelectorAll('#connectBtn, #connectBtnMobile');
+        const messageElement = document.getElementById('message');
+        const closeMessageBtn = document.getElementById('closeMessageBtn');
+    
+        // Ajouter l'événement de clic pour afficher le message
+        connectButtons.forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); // Empêcher la redirection du lien
+                messageElement.style.display = 'block'; // Afficher le message
+            });
+        });
+    
+        // Ajouter l'événement de clic pour fermer le message
+        closeMessageBtn.addEventListener('click', function() {
+            messageElement.style.display = 'none'; // Cacher le message
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Sélectionne tous les liens des icônes de réseaux sociaux
+            const socialLinks = document.querySelectorAll('.social-icons a');
+            
+            // Boucle pour ajouter un événement de clic à chaque lien
+            socialLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // Empêche le lien de rediriger
+                    showMessage(); // Affiche le message
+                });
+            });
+    
+            // Fonction pour afficher le message
+            function showMessage() {
+                const message = document.getElementById('message');
+                message.style.display = 'block';
+            }
+    
+            // Fonction pour fermer le message
+            const closeMessageBtn = document.getElementById('closeMessageBtn');
+            closeMessageBtn.addEventListener('click', function () {
+                const message = document.getElementById('message');
+                message.style.display = 'none';
+            });
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
