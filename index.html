@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THZKEWJP6S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-THZKEWJP6S');
+    </script>
+    <title>EdnomCercle - Marketplace et Formation en Ligne pour Entrepreneurs</title>
+    <meta name="description" content="Découvrez EdnomCercle, la plateforme de marketplace et d'e-learning qui connecte entrepreneurs et étudiants avec des services personnalisés.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/Ednom_logo.png" alt=""></a>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Catégories.html">Boutique</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="formations.html">Services</a></li>
+                <li><a href="à propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="Button">
+                <a href="#" id="connectBtn" class="Button-action">Se connecter</a>
+            </div>
+            <div class="menu-hambourguer-butoon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="menu-hambourguer">
+            <ul class="links" id="links-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Boutique.html">Boutique</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="formations.html">Services</a></li>
+                <li><a href="à propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="Button-menu-hambourguer" id="Se-connecter">
+                    <a href="#" id="connectBtnMobile" class="Button-action">Se connecter</a>
+                </div>
+            </ul>
+        </div>
+        <div class="section-separateur"></div>
+        <!-- Nouveau separator -->
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue sur EdnomCercle</h1>
+            <p>Explorez nos services d'e-commerce et d'e-learning</p>
+            <a href="boutique.html" class="hero-btn">Voir la Boutique</a>
+            <a href="formations.html" class="hero-btn">Voir Nos Formations</a>
+        </div>
+    </section>
+    <section class="special-offers-popup" id="offerPopup">
+        <div class="offer-popup-content">
+            <h2>Offre Spéciale Limitée !</h2>
+            <p>Profitez de réductions exclusives sur nos produits et formations pendant 24 heures seulement !</p>
+            <div class="countdown" id="countdown-timer"></div>
+            <a href="#" class="btn-offer">Voir les Offres</a>
+            <button class="close-btn" onclick="closePopup()">Fermer</button>
+        </div>
+    </section>
+    <section class="split-section">
+        <div class="left-part">
+            <img src="image/hero3.jpg" alt="Description de l'image" />
+        </div>
+        <div class="right-part">
+            <h2>Votre titre ici</h2>
+            <p>Voici le texte que vous souhaitez afficher dans la partie droite. Vous pouvez y mettre des informations supplémentaires.</p>
+        </div>
+    </section>
+
+
+    <script>
+        const menuHambourguerButton = document.querySelector(".menu-hambourguer-butoon");
+        const menuHambourguerButtonIcon = document.querySelector(".menu-hambourguer-butoon i");
+        const menuHambourguer = document.querySelector(".menu-hambourguer");
+
+        // Fonction pour basculer l'état du menu
+        menuHambourguerButton.onclick = function(e) {
+            e.stopPropagation(); // Empêche la propagation du clic au document
+            menuHambourguer.classList.toggle("ouvert");
+            const isOuvert = menuHambourguer.classList.contains("ouvert");
+            menuHambourguerButtonIcon.className = isOuvert ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+        };
+
+        // Fonction pour fermer le menu si l'utilisateur clique ailleurs
+        document.onclick = function() {
+            if (menuHambourguer.classList.contains("ouvert")) {
+                menuHambourguer.classList.remove("ouvert");
+                menuHambourguerButtonIcon.className = "fa-solid fa-bars";
+            }
+        };
+
+        // Empêche la fermeture si on clique dans le menu
+        menuHambourguer.onclick = function(e) {
+            e.stopPropagation(); // Empêche le clic d'atteindre le document
+        };
+    </script>
+    <script>
+        // script.js
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('.hero-image');
+            let currentImageIndex = 0;
+
+            function changeImage() {
+                images[currentImageIndex].classList.remove('active');
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                images[currentImageIndex].classList.add('active');
+            }
+
+            setInterval(changeImage, 3000); // Change image every 3 seconds
+        });
+    </script>
+
+
+    <script>
+        let popupClosed = false;
+
+        function showPopup() {
+            if (!popupClosed) {
+                document.getElementById("offerPopup").style.display = "block";
+            }
+        }
+
+        function closePopup() {
+            document.getElementById("offerPopup").style.display = "none";
+            popupClosed = true;
+            setTimeout(() => {
+                popupClosed = false;
+                showPopup(); // La fenêtre réapparaît après 10 secondes
+            }, 10000); // 10 secondes
+        }
+
+        // Compte à rebours
+        const countdown = document.getElementById('countdown-timer');
+        const targetDate = new Date().getTime() + 86400000; // 24 heures
+
+        const interval = setInterval(function() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                countdown.innerHTML = "L'offre a expiré!";
+            } else {
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                const seconds = Math.floor((timeLeft % 1000) / 100);
+
+                countdown.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+            }
+        }, 1000);
+
+        // Affiche la popup toutes les 3 secondes, mais après 10 secondes si fermée
+        setInterval(showPopup, 3000);
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
