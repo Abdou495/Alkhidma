@@ -34,7 +34,7 @@
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="images/Ednom_logo.png" alt=""></a>
+                <a href="index.html"><img src="image/Ednom_logo.png" alt=""></a>
             </div>
             <ul class="links">
                 <li><a href="index.html">Accueil</a></li>
@@ -68,6 +68,7 @@
         <div class="section-separateur"></div>
         <!-- Nouveau separator -->
     </header>
+    <!-- hero-->
     <section class="hero">
         <div class="hero-content">
             <h1>Bienvenue sur EdnomCercle</h1>
@@ -76,6 +77,7 @@
             <a href="formations.html" class="hero-btn">Voir Nos Formations</a>
         </div>
     </section>
+    <!-- la fenetre des offres-->
     <section class="special-offers-popup" id="offerPopup">
         <div class="offer-popup-content">
             <h2>Offre Spéciale Limitée !</h2>
@@ -85,6 +87,7 @@
             <button class="close-btn" onclick="closePopup()">Fermer</button>
         </div>
     </section>
+    <!-- les deux image et text-->
     <section class="split-section">
         <div class="left-part">
             <img src="image/hero3.jpg" alt="Description de l'image" />
@@ -94,8 +97,32 @@
             <p>Voici le texte que vous souhaitez afficher dans la partie droite. Vous pouvez y mettre des informations supplémentaires.</p>
         </div>
     </section>
+    <section class="testimonials">
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="image/hero2.jpg" alt="Client" class="profile-img">
+                <h3 class="client-name">Nom du Client</h3>
+            </div>
+            <p class="testimonial-text">"EdnomCercle m'a permis de développer mon entreprise efficacement. Les formations sont de qualité et l'interface est intuitive. Hautement recommandé!"</p>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="image/hero2.jpg" alt="Client" class="profile-img">
+                <h3 class="client-name">Nom du Client</h3>
+            </div>
+            <p class="testimonial-text">"EdnomCercle m'a permis de développer mon entreprise efficacement. Les formations sont de qualité et l'interface est intuitive. Hautement recommandé!"</p>
+        </div>
+        <div class="testimonial">
+            <div class="testimonial-header">
+                <img src="image/hero2.jpg" alt="Client" class="profile-img">
+                <h3 class="client-name">Nom du Client</h3>
+            </div>
+            <p class="testimonial-text">"EdnomCercle m'a permis de développer mon entreprise efficacement. Les formations sont de qualité et l'interface est intuitive. Hautement recommandé!"</p>
+        </div>
+    </section>
 
 
+    <!--menu-hambourguer -->
     <script>
         const menuHambourguerButton = document.querySelector(".menu-hambourguer-butoon");
         const menuHambourguerButtonIcon = document.querySelector(".menu-hambourguer-butoon i");
@@ -122,23 +149,7 @@
             e.stopPropagation(); // Empêche le clic d'atteindre le document
         };
     </script>
-    <script>
-        // script.js
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('.hero-image');
-            let currentImageIndex = 0;
-
-            function changeImage() {
-                images[currentImageIndex].classList.remove('active');
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                images[currentImageIndex].classList.add('active');
-            }
-
-            setInterval(changeImage, 3000); // Change image every 3 seconds
-        });
-    </script>
-
-
+    <!-- la fenetre des offres-->
     <script>
         let popupClosed = false;
 
