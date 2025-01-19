@@ -186,9 +186,6 @@ body {
 
 /* Style hero */
 
-
-/* Style hero */
-
 .hero {
     height: 100vh;
     /* Hauteur de la section égale à la hauteur de la fenêtre */
@@ -272,6 +269,9 @@ body {
     }
 }
 
+
+/* fenetre des offres */
+
 .special-offers-popup {
     display: none;
     position: fixed;
@@ -327,6 +327,9 @@ body {
     cursor: pointer;
 }
 
+
+/* split-section */
+
 .split-section {
     display: flex;
     align-items: stretch;
@@ -358,4 +361,60 @@ body {
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+    /* Permet aux éléments de se replier sur une nouvelle ligne */
+}
+
+.testimonial {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.client-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+}
+
+
+/* Media Query pour les petits écrans */
+
+@media (max-width: 768px) {
+    .testimonial {
+        width: 100%;
+        /* Les témoignages occupent toute la largeur sur les petits écrans */
+        margin-bottom: 20px;
+        /* Espacement entre les témoignages */
+    }
 }
