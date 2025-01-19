@@ -372,6 +372,18 @@ body {
     /* Permet aux éléments de se replier sur une nouvelle ligne */
 }
 
+
+/* avis*/
+
+.testimonials {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #065a8e;
+    /* Choisissez la couleur de fond ou ajoutez une image */
+    flex-wrap: wrap;
+}
+
 .testimonial {
     background-color: #fff;
     border-radius: 8px;
@@ -405,16 +417,4 @@ body {
     font-size: 1.1rem;
     font-style: italic;
     color: #555;
-}
-
-
-/* Media Query pour les petits écrans */
-
-@media (max-width: 768px) {
-    .testimonial {
-        width: 100%;
-        /* Les témoignages occupent toute la largeur sur les petits écrans */
-        margin-bottom: 20px;
-        /* Espacement entre les témoignages */
-    }
 }
