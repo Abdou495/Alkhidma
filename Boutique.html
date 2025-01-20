@@ -68,46 +68,35 @@
         <div class="section-separateur"></div>
         <!-- Nouveau separator -->
     </header>
-    <section class="shop">
-        <h2>Notre Boutique</h2>
-        <div class="product">
-            <a href="Détails.html?product=1">
-                <img src="image/hero1.jpg" alt="Produit 1">
-                <h3>Produit 1</h3>
-                <span>$29.99</span>
-            </a>
+    <section class="product-grid">
+        <div class="product-card" onclick="viewProduct('1', 'une moderne une moderne une moderne une moderne une moderne une moderne', '2990 FCFA', ['image/hero2.jpg', 'image/hero1.jpg', 'image/hero3.jpg'])">
+            <img src="image/p1_5.jpg" alt="Montre Homme">
+            <p>2990 FCFA</p>
         </div>
-        <div class="product">
-            <a href="Détails.html?product=2">
-                <img src="image/product2.jpg" alt="Produit 2">
-                <h3>Produit 2</h3>
-                <span>$49.99</span>
-            </a>
+        <div class="product-card" onclick="viewProduct('2', 'Chaussures Sport', '5990 FCFA', ['shoe1.jpg', 'shoe2.jpg', 'shoe3.jpg'])">
+            <img src="shoe1.jpg" alt="Chaussures Sport">
+            <p>5990 FCFA</p>
         </div>
-        <div class="product">
-            <a href="Détails.html?product=3">
-                <img src="image/product3.jpg" alt="Produit 3">
-                <h3>Produit 3</h3>
-                <span>$19.99</span>
-            </a>
-        </div>
-        <div class="product">
-            <a href="Détails.html?product=4">
-                <img src="image/product4.jpg" alt="Produit 4">
-                <h3>Produit 4</h3>
-                <span>$59.99</span>
-            </a>
-        </div>
-        <div class="product">
-            <a href="Détails.html?product=5">
-                <img src="image/product5.jpg" alt="Produit 5">
-                <h3>Produit 4</h3>
-                <span>$59.99</span>
-            </a>
+        <div class="product-card" onclick="viewProduct('3', 'Sac à dos moderne', '10 000 FCFA', ['sac1.jpg', 'sac2.jpg', 'sac3.jpg'])">
+            <img src="sac1.jpg" alt="Sac à dos moderne">
+            <p>10 000 FCFA</p>
         </div>
 
+        <!-- Ajouter d'autres produits ici -->
     </section>
 
+    <script>
+        function viewProduct(id, name, price, images) {
+            const product = {
+                id,
+                name,
+                price,
+                images
+            };
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+            window.location.href = 'details.html';
+        }
+    </script>
     <!--menu-hambourguer -->
     <script>
         const menuHambourguerButton = document.querySelector(".menu-hambourguer-butoon");
