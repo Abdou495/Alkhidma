@@ -1,1055 +1,313 @@
-/* Styles globaux */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Poppins", serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-    background-color: #fff;
-}
-
-
-/* Header */
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: #0979bd;
-    font-size: 1.1rem;
-}
-
-.links li a:hover {
-    color: #0979bd;
-    text-decoration: underline;
-    transition: all 0.3s ease;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 0 2rem;
-    background-color: #fff;
-}
-
-body {
-    padding-top: 60px;
-}
-
-.navbar {
-    width: 100%;
-    max-width: 1200px;
-    height: 60px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar .logo img {
-    height: 50px;
-}
-
-.navbar .links {
-    display: flex;
-    gap: 2rem;
-}
-
-.navbar .menu-hambourguer-butoon {
-    color: #0979bd;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-}
-
-.Button-action {
-    background-color: #fff;
-    border: 1px solid #0979bd;
-    padding: 0.5rem 1.2rem;
-    border-radius: 5px;
-    outline: none;
-    font-size: 0.7rem;
-    font-weight: bold;
-    cursor: pointer;
-    color: #0979bd;
-}
-
-.Button-action:hover {
-    color: #fff;
-    background-color: #0979bd;
-    text-decoration: none;
-}
-
-.cart-icon {
-    margin-left: 5px;
-    color: #0979bd;
-    font-size: 1rem;
-    cursor: pointer;
-    display: none;
-}
-
-.cart-icon a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.section-separateur {
-    height: 2px;
-    background-color: #0979bd;
-    width: 100%px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 1rem;
-}
-
-
-/* menu-hambourguer */
-
-.menu-hambourguer {
-    display: none;
-    height: 0;
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    width: 200px;
-    background-color: #0979bd;
-    border-radius: 1px;
-    overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-#links-menu a {
-    color: #fff;
-}
-
-#Se-connecter a {
-    color: #0979bd;
-}
-
-.menu-hambourguer.ouvert {
-    height: 350px;
-}
-
-.divider {
-    height: 1px;
-    background-color: #ddd;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1rem;
-}
-
-.Button-menu-hambourguer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu-hambourguer li {
-    padding: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-/* Responsif pour le Header */
-
-@media(max-width: 990px) {
-    .navbar .links,
-    .navbar .Button-action {
-        display: none;
-    }
-    .navbar .menu-hambourguer-butoon {
-        display: block;
-    }
-    .cart-icon {
-        display: block;
-    }
-    .menu-hambourguer {
-        display: block;
-    }
-}
-
-
-/* Hero Section for Large Screens */
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #0979bd;
-    text-align: center;
-    animation: fadeIn 2.5s ease;
-}
-
-.text-section {
-    flex: 1 1 50%;
-    padding: 20px;
-    animation: slideInLeft 2s ease forwards;
-}
-
-.text-section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0;
-    color: #fff;
-    animation: popIn 2s ease-in-out;
-}
-
-.text-section p {
-    font-size: 1rem;
-    margin: 20px 0;
-    color: #fff;
-}
-
-.buttons {
-    margin-top: 20px;
-    animation: bounceIn 3s ease forwards;
-}
-
-.buttons a {
-    text-decoration: none;
-    color: #091540;
-    background-color: #fff;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-right: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease, background-color 0.4s ease;
-}
-
-.buttons a:hover {
-    transform: translateY(-7px);
-    background-color: #fff;
-    color: #0979bd;
-}
-
-.image-section {
-    flex: 1 1 45%;
-    position: relative;
-    animation: slideInRight 2.5s ease forwards;
-}
-
-.image-section img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.4s ease;
-}
-
-.image-section img:hover {
-    transform: translateY(-15px);
-}
-
-.image-section .phone-overlay {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-}
-
-.image-section .phone-overlay img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-
-/* Keyframe Animations */
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-70px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(70px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes bounceIn {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    60% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes popIn {
-    0% {
-        transform: scale(0.7);
-        opacity: 0;
-    }
-    80% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-/* Responsive Design for Small Screens */
-
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        background-color: #ffffff;
-        padding: 60px;
-    }
-    .text-section {
-        order: 2;
-        animation: fadeIn 1.5s ease-in-out;
-    }
-    .text-section h1 {
-        font-size: 2rem;
-        color: #091540;
-    }
-    .text-section p {
-        font-size: 1rem;
-        color: #333;
-    }
-    .buttons a {
-        display: block;
-        margin: 10px 0;
-    }
-    .image-section {
-        order: 1;
-        margin-bottom: 20px;
-    }
-    .image-section img {
-        width: 80%;
-    }
-}
-
-@media (max-width: 480px) {
-    .text-section h1 {
-        font-size: 1.5rem;
-    }
-    .text-section p {
-        font-size: 0.9rem;
-    }
-    .buttons a {
-        padding: 10px 20px;
-        font-size: 0.8rem;
-    }
-}
-
-
-/* fenetre des offres */
-
-.special-offers-popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Centrer la fenêtre */
-    background-color: #0979bd;
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
-    z-index: 9999;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.offer-popup-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.offer-popup-content h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.offer-popup-content p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.countdown {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.btn-offer {
-    background-color: #ff9900;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 15px;
-}
-
-.close-btn {
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-
-/* split-section */
-
-.split-section {
-    display: flex;
-    align-items: stretch;
-    /* Cela assure que les deux parties ont la même hauteur */
-    justify-content: space-between;
-    height: 300px;
-    /* Ou '100vh' pour remplir toute la hauteur de la fenêtre */
-}
-
-.left-part,
-.right-part {
-    width: 50%;
-    height: 100%;
-}
-
-.left-part {
-    background-size: cover;
-    background-position: center;
-}
-
-.left-part img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.right-part {
-    background-color: #f4f4f4;
-    color: #065a8e;
-    padding: 20px;
-    text-align: center;
-}
-
-
-/* avis*/
-
-.testimonials-section {
-    display: flex;
-    flex-wrap: wrap;
-    /* Permet d'adapter les colonnes */
-    gap: 40px;
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    align-items: center;
-    text-align: center;
-}
-
-.testimonials-section .column {
-    flex: 1 1 100%;
-    /* La colonne prend toute la largeur sur les petits écrans */
-    max-width: 600px;
-}
-
-.testimonials {
-    flex: 2 1 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.testimonial {
-    flex: 1 1 calc(50% - 20px);
-    /* 50% de la largeur, espace inclus */
-    box-sizing: border-box;
-    position: relative;
-    padding: 20px;
-    background-color: #fff;
-    border-left: 5px solid #0979bd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 1s ease forwards;
-}
-
-.testimonial:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.profile-image {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial h4 {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Media Query pour rendre le design plus réactif */
-
-@media (max-width: 768px) {
-    .testimonials {
-        flex-direction: column;
-    }
-    .testimonial {
-        flex: 1 1 100%;
-    }
-}
-
-
-/* Section Services */
-
-.services-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding: 40px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.column {
-    flex: 1;
-}
-
-.column h2 {
-    font-size: 2em;
-    color: #0979bd;
-    margin-bottom: 20px;
-}
-
-.column p {
-    font-size: 1em;
-    color: #333;
-    line-height: 1.6;
-}
-
-.services-image {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    /* Initialement invisible */
-    transform: translateY(50px);
-    /* Déplace l'image vers le bas */
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    /* Animation */
-}
-
-.service-item {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    /* Initialement invisible */
-    transform: translateY(50px);
-    /* Déplace les éléments vers le bas */
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    /* Animation */
-}
-
-.service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.service-item h3 {
-    font-size: 1.5em;
-    color: #0979bd;
-}
-
-.service-item p {
-    font-size: 1em;
-    color: #555;
-}
-
-.service-item button {
-    padding: 10px 20px;
-    background-color: #0979bd;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.service-item button:hover {
-    background-color: #066a92;
-}
-
-
-/* Lorsque l'élément est visible dans la fenêtre, on applique l'animation */
-
-.column.visible,
-.services-image.visible,
-.service-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-    /* Revenir à sa position normale */
-}
-
-
-/* blog */
-
-.blog-section {
-    padding: 40px;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.blog-section h2 {
-    font-size: 2.5em;
-    color: #0979bd;
-    margin-bottom: 20px;
-}
-
-.blog-section p {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 40px;
-}
-
-
-/* Wrapper qui permet le défilement horizontal */
-
-.blog-posts-wrapper {
-    display: flex;
-    overflow-x: auto;
-    /* Permet le défilement horizontal */
-    gap: 30px;
-    /* Espacement entre les articles */
-    padding-bottom: 20px;
-    /* Espace au bas pour que la scrollbar ne touche pas le contenu */
-    scroll-snap-type: x mandatory;
-    /* Ajoute l'effet de "snap" sur les articles */
-}
-
-
-/* Chaque article de blog */
-
-.blog-post {
-    background-color: #fff;
-    padding: 20px;
-    width: 300px;
-    /* Largeur fixe pour chaque article */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    flex-shrink: 0;
-    /* Évite que les articles se rétrécissent */
-    scroll-snap-align: start;
-    /* Permet à chaque article de s'arrêter lorsqu'il est en vue */
-}
-
-.blog-post:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.blog-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.blog-post h3 {
-    font-size: 1.5em;
-    color: #0979bd;
-    margin-top: 20px;
-}
-
-.blog-post p {
-    font-size: 1em;
-    color: #555;
-    margin: 20px 0;
-}
-
-.read-more {
-    padding: 10px 20px;
-    background-color: #0979bd;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.read-more:hover {
-    background-color: #066a92;
-}
-
-
-/* Style de la scrollbar (optionnel) */
-
-.blog-posts-wrapper::-webkit-scrollbar {
-    height: 8px;
-}
-
-.blog-posts-wrapper::-webkit-scrollbar-thumb {
-    background-color: #0979bd;
-    border-radius: 4px;
-}
-
-.blog-posts-wrapper::-webkit-scrollbar-track {
-    background-color: #f4f4f4;
-}
-
-
-/* Rejoignez */
-
-.cta-section {
-    padding: 60px 20px;
-    background: radial-gradient(circle, rgba(9, 121, 189, 0.9) 30%, rgba(0, 91, 150, 0.9) 100%);
-    color: #fff;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    width: 90%;
-    /* Largeur réglée à 90% de l'élément parent */
-    margin: 40px auto;
-    /* Centrage horizontal et espacement de 40px en haut et en bas */
-}
-
-.cta-section::before,
-.cta-section::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    animation: float 6s infinite ease-in-out;
-}
-
-.cta-section::before {
-    width: 150px;
-    height: 150px;
-    top: -30px;
-    left: -30px;
-}
-
-.cta-section::after {
-    width: 200px;
-    height: 200px;
-    bottom: -50px;
-    right: -50px;
-}
-
-.cta-content h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-.cta-content p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #fff;
-    color: #0979bd;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: none;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #005b96;
-    color: #fff;
-    cursor: pointer;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes float {
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-
-/* Styles de base */
-
-.services-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-}
-
-.service-card {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-}
-
-.service-icon {
-    font-size: 3rem;
-    color: #0979bd;
-    margin-bottom: 1rem;
-}
-
-.service-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #333;
-}
-
-.service-info p {
-    font-size: 1rem;
-    color: #666;
-}
-
-.service-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.7rem 1.2rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #0979bd;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.service-btn:hover {
-    background-color: #065a94;
-}
-
-
-/* Responsiveness */
-
-@media (max-width: 768px) {
-    .services-section {
-        padding: 1.5rem;
-        gap: 1rem;
-    }
-    .service-card {
-        padding: 1rem;
-    }
-    .service-info h3 {
-        font-size: 1.3rem;
-    }
-    .service-info p {
-        font-size: 0.9rem;
-    }
-    .service-btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .service-icon {
-        font-size: 2.5rem;
-    }
-    .service-info h3 {
-        font-size: 1.1rem;
-    }
-    .service-info p {
-        font-size: 0.85rem;
-    }
-    .service-btn {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.8rem;
-    }
-}
-
-
-/* blog page */
-
-.blog-section {
-    padding: 2rem;
-    background-color: #f7f7f7;
-}
-
-.blog-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #0979bd;
-    margin-bottom: 2rem;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.blog-post {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.blog-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.blog-content {
-    padding: 1.5rem;
-}
-
-.blog-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.blog-content p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.read-more {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background-color: #0979bd;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-
-.read-more:hover {
-    background-color: #065a94;
-}
-
-
-/* Pour les petits écrans (smartphones) */
-
-@media screen and (max-width: 768px) {
-    .blog-grid {
-        grid-template-columns: 1fr;
-        /* Une seule colonne pour une meilleure lisibilité */
-    }
-    .blog-content {
-        padding: 1rem;
-    }
-    .blog-content h2 {
-        font-size: 1.5rem;
-    }
-    .blog-content p {
-        font-size: 0.9rem;
-    }
-    .read-more {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-}
-
-
-/* Pour les écrans moyens (tablettes) */
-
-@media screen and (max-width: 1024px) {
-    .blog-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-    .blog-content h2 {
-        font-size: 1.7rem;
-    }
-    .read-more {
-        padding: 0.6rem 1.2rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-THZKEWJP6S"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-THZKEWJP6S');
+    </script>
+    <title>EdnomCercle - Marketplace et Formation en Ligne pour Entrepreneurs</title>
+    <meta name="description" content="Découvrez EdnomCercle, la plateforme de marketplace et d'e-learning qui connecte entrepreneurs et étudiants avec des services personnalisés.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="image/Ednom_logo.png" alt=""></a>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Boutique.html">Boutique</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="à propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="Button">
+                <a href="#" id="connectBtn" class="Button-action">Se connecter</a>
+            </div>
+            <div class="menu-hambourguer-butoon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="menu-hambourguer">
+            <ul class="links" id="links-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Boutique.html">Boutique</a></li>
+                <li><a href="formations.html">Formations</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="à propos.html">À propos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <div class="Button-menu-hambourguer" id="Se-connecter">
+                    <a href="#" id="connectBtnMobile" class="Button-action">Se connecter</a>
+                </div>
+            </ul>
+        </div>
+        <div class="section-separateur"></div>
+        <!-- Nouveau separator -->
+    </header>
+    <!-- Hero Section -->
+    <div class="container">
+        <div class="text-section">
+            <h1>Bienvenue sur<br>Ednom Cercle</h1>
+            <p>Transformez votre présence en ligne avec nos services de conception et de développement de sites web exceptionnels, en créant des sites époustouflants et conviviaux qui stimulent l'engagement et la croissance !</p>
+            <div class="buttons">
+                <a href="#">Voir la Boutique</a>
+                <a href="#">Voir nos Formations</a>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="image/Boutique.png" alt="Desktop and shopping" />
+            <div class="phone-overlay">
+                <img src="image/img2.png" alt="Phone displaying shopping cart" />
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Avis-->
+    <div class="testimonials-section">
+        <div class="column">
+            <h2>Témoignages</h2>
+            <p>Nos clients partagent leurs expériences avec EdnomCercle.</p>
+        </div>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="image/hero1.jpg" alt="Profil de Sarah K." class="profile-image">
+                <p>« EdnomCercle m’a aidé à lancer ma boutique en ligne avec facilité. Leur plateforme est simple à utiliser et très efficace. »</p>
+                <h4>- Sarah K.</h4>
+            </div>
+            <div class="testimonial">
+                <img src="image/hero2.jpg" alt="Profil de David M." class="profile-image">
+                <p>« La plateforme d’e-learning d’EdnomCercle m’a permis de suivre des formations pertinentes à mon rythme. »</p>
+                <h4>- David M.</h4>
+            </div>
+            <div class="testimonial">
+                <img src="image/hero3.jpg" alt="Profil de Aïcha L." class="profile-image">
+                <p>« Les services de création graphique sont incroyables ! L'équipe est très réactive et professionnelle. »</p>
+                <h4>- Aïcha L.</h4>
+            </div>
+            <div class="testimonial">
+                <img src="image/hero3.jpg" alt="Profil de Aïcha L." class="profile-image">
+                <p>« Les services de création graphique sont incroyables ! L'équipe est très réactive et professionnelle. »</p>
+                <h4>- Aïcha L.</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- services section-->
+    <section class="services-section">
+        <div class="column">
+            <h2>Nos Services</h2>
+            <p>Découvrez les services que nous offrons pour faciliter votre expérience avec EdnomCercle. Que ce soit pour l'e-learning, l'e-commerce, ou nos services de création de bases de données et d'infographie, nous avons une solution pour vous.</p>
+            <img src="image/hero1.jpg" alt="Nos services" class="services-image">
+        </div>
+        <div class="column">
+            <div class="service-item">
+                <h3>E-Learning</h3>
+                <p>Accédez à des formations en ligne pour développer vos compétences à votre rythme.</p>
+                <button>En savoir plus</button>
+            </div>
+            <div class="service-item">
+                <h3>E-Commerce</h3>
+                <p>Vendez ou achetez des produits en ligne sur notre plateforme facile à utiliser.</p>
+                <button>En savoir plus</button>
+            </div>
+            <div class="service-item">
+                <h3>Création de bases de données</h3>
+                <p>Créez des bases de données personnalisées pour vos projets et entreprises.</p>
+                <button>En savoir plus</button>
+            </div>
+            <div class="service-item">
+                <h3>Infographie</h3>
+                <p>Nous créons des designs sur mesure pour répondre à vos besoins visuels.</p>
+                <button>En savoir plus</button>
+            </div>
+        </div>
+    </section>
+
+
+    </section>
+    <!-- blog-->
+    <section class="blog-section">
+        <h2>Notre Blog</h2>
+        <p>Restez informé avec les dernières nouvelles, conseils et articles sur l'e-learning, l'e-commerce et plus encore.</p>
+
+        <div class="blog-posts-wrapper">
+            <div class="blog-post">
+                <img src="image1.jpg" alt="Article 1" class="blog-image">
+                <h3>Les tendances du e-commerce en 2025</h3>
+                <p>Découvrez les dernières tendances qui façonnent l'avenir du commerce en ligne et comment vous pouvez en profiter.</p>
+                <button class="read-more">Lire la suite</button>
+            </div>
+
+            <div class="blog-post">
+                <img src="image2.jpg" alt="Article 2" class="blog-image">
+                <h3>5 astuces pour réussir dans l'e-learning</h3>
+                <p>Apprenez comment optimiser votre expérience d'apprentissage en ligne avec ces conseils pratiques.</p>
+                <button class="read-more">Lire la suite</button>
+            </div>
+
+            <div class="blog-post">
+                <img src="image/hero1.jpg" alt="Article 3" class="blog-image">
+                <h3>La création de bases de données pour les débutants</h3>
+                <p>Un guide étape par étape pour comprendre et commencer à travailler avec des bases de données.</p>
+                <button class="read-more">Lire la suite</button>
+            </div>
+
+            <!-- Ajoutez plus de blog posts -->
+            <div class="blog-post">
+                <img src="image4.jpg" alt="Article 4" class="blog-image">
+                <h3>La gestion des données dans l'e-learning</h3>
+                <p>Apprenez à gérer efficacement les données des étudiants dans vos plateformes d'apprentissage.</p>
+                <button class="read-more">Lire la suite</button>
+            </div>
+
+            <div class="blog-post">
+                <img src="image5.jpg" alt="Article 5" class="blog-image">
+                <h3>Optimiser votre site e-commerce pour 2025</h3>
+                <p>Les meilleures pratiques pour améliorer les performances de votre site de vente en ligne.</p>
+                <button class="read-more">Lire la suite</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Rejoignez notre communauté dès aujourd'hui !</h2>
+            <p>Découvrez une nouvelle manière d'apprendre et de vendre avec EdnomCercle. Inscrivez-vous pour bénéficier d'offres exclusives et de ressources gratuites.</p>
+            <a href="#inscription" class="cta-button">Commencer Maintenant</a>
+        </div>
+    </section>
+
+    <!-- les deux image et text-->
+    <section class="split-section">
+        <div class="left-part">
+            <img src="image/hero3.jpg" alt="Description de l'image" />
+        </div>
+        <div class="right-part">
+            <h2>Votre titre ici</h2>
+            <p>Voici le texte que vous souhaitez afficher dans la partie droite. Vous pouvez y mettre des informations supplémentaires.</p>
+        </div>
+    </section>
+
+    <!--menu-hambourguer -->
+    <script>
+        const menuHambourguerButton = document.querySelector(".menu-hambourguer-butoon");
+        const menuHambourguerButtonIcon = document.querySelector(".menu-hambourguer-butoon i");
+        const menuHambourguer = document.querySelector(".menu-hambourguer");
+
+        // Fonction pour basculer l'état du menu
+        menuHambourguerButton.onclick = function(e) {
+            e.stopPropagation(); // Empêche la propagation du clic au document
+            menuHambourguer.classList.toggle("ouvert");
+            const isOuvert = menuHambourguer.classList.contains("ouvert");
+            menuHambourguerButtonIcon.className = isOuvert ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+        };
+
+        // Fonction pour fermer le menu si l'utilisateur clique ailleurs
+        document.onclick = function() {
+            if (menuHambourguer.classList.contains("ouvert")) {
+                menuHambourguer.classList.remove("ouvert");
+                menuHambourguerButtonIcon.className = "fa-solid fa-bars";
+            }
+        };
+
+        // Empêche la fermeture si on clique dans le menu
+        menuHambourguer.onclick = function(e) {
+            e.stopPropagation(); // Empêche le clic d'atteindre le document
+        };
+    </script>
+    <!-- la fenetre des offres-->
+    <script>
+        let popupClosed = false;
+
+        function showPopup() {
+            if (!popupClosed) {
+                document.getElementById("offerPopup").style.display = "block";
+            }
+        }
+
+        function closePopup() {
+            document.getElementById("offerPopup").style.display = "none";
+            popupClosed = true;
+            setTimeout(() => {
+                popupClosed = false;
+                showPopup(); // La fenêtre réapparaît après 10 secondes
+            }, 10000); // 10 secondes
+        }
+
+        // Compte à rebours
+        const countdown = document.getElementById('countdown-timer');
+        const targetDate = new Date().getTime() + 86400000; // 24 heures
+
+        const interval = setInterval(function() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                countdown.innerHTML = "L'offre a expiré!";
+            } else {
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                const seconds = Math.floor((timeLeft % 1000) / 100);
+
+                countdown.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+            }
+        }, 1000);
+
+        // Affiche la popup toutes les 3 secondes, mais après 10 secondes si fermée
+        setInterval(showPopup, 3000);
+    </script>
+    <script>
+        // Fonction pour détecter si un élément est visible dans la fenêtre
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (rect.top >= 0 && rect.left >= 0 && rect.bottom <= window.innerHeight && rect.right <= window.innerWidth);
+        }
+
+        // Ajout des animations au défilement
+        function handleScroll() {
+            const elements = document.querySelectorAll('.column, .services-image, .service-item');
+
+            elements.forEach(el => {
+                if (isElementInViewport(el)) {
+                    el.classList.add('visible'); // Ajouter la classe 'visible' lorsque l'élément devient visible
+                }
+            });
+        }
+
+        // Exécuter la fonction de gestion du défilement au chargement de la page et lors du défilement
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
