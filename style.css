@@ -226,7 +226,7 @@ body {
 
 .buttons a {
     text-decoration: none;
-    color: #091540;
+    color: #0979bd;
     background-color: #fff;
     padding: 15px 30px;
     border-radius: 30px;
@@ -239,8 +239,8 @@ body {
 
 .buttons a:hover {
     transform: translateY(-7px);
-    background-color: #fff;
-    color: #0979bd;
+    background-color: #005b96;
+    color: #fff;
 }
 
 .image-section {
@@ -857,7 +857,105 @@ body {
 }
 
 
-/* Styles de base */
+/* à propos */
+
+.about-section {
+    padding: 60px 20px;
+    background: none;
+    /* Aucun fond */
+    color: #fff;
+    /* Texte visible sur un fond clair */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section .text-content {
+    flex: 1 1 50%;
+    text-align: left;
+}
+
+.about-section .text-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-section .text-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.about-section .video-content {
+    flex: 1 1 50%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .video-content video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.about-section .button-container {
+    margin-top: 30px;
+}
+
+.about-section .btn-see-more {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #289db9;
+    /* Couleur principale */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-section .btn-see-more:hover {
+    background-color: #1a7891;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .about-section .container {
+        flex-direction: column;
+    }
+    .about-section .text-content h2 {
+        font-size: 1.8rem;
+        text-align: center;
+        color: #0979bd;
+    }
+    .about-section .text-content p {
+        font-size: 0.9rem;
+        text-align: center;
+        color: #000;
+    }
+    .about-section .video-content {
+        max-width: 100%;
+    }
+}
+
+
+/* Services de base */
 
 .services-section {
     display: grid;
